@@ -14,3 +14,6 @@ Completed user stories:
 
 Walkthrough of all user stories:
 
+![alt tag](https://github.com/oazarova/swift-tip-calculator/blob/master/tips/tips.gif)
+
+GIF created with <a href=http://www.cockos.com/licecap/>LiceCap</a>
