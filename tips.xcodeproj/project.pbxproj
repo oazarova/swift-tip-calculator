@@ -13,6 +13,7 @@
 		772AB3431A5F571A00C5EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772AB3421A5F571A00C5EE6B /* Images.xcassets */; };
 		772AB3461A5F571A00C5EE6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 772AB3441A5F571A00C5EE6B /* LaunchScreen.xib */; };
 		772AB3521A5F571A00C5EE6B /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772AB3511A5F571A00C5EE6B /* tipsTests.swift */; };
+		772AB35C1A60B43E00C5EE6B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772AB35B1A60B43E00C5EE6B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		772AB34B1A5F571A00C5EE6B /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		772AB3501A5F571A00C5EE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772AB3511A5F571A00C5EE6B /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		772AB35B1A60B43E00C5EE6B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,8 @@
 		772AB3381A5F571A00C5EE6B /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				772AB35D1A60B44600C5EE6B /* View Controllers */,
 				772AB33B1A5F571A00C5EE6B /* AppDelegate.swift */,
-				772AB33D1A5F571A00C5EE6B /* ViewController.swift */,
 				772AB33F1A5F571A00C5EE6B /* Main.storyboard */,
 				772AB3421A5F571A00C5EE6B /* Images.xcassets */,
 				772AB3441A5F571A00C5EE6B /* LaunchScreen.xib */,
@@ -110,6 +112,15 @@
 				772AB3501A5F571A00C5EE6B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		772AB35D1A60B44600C5EE6B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				772AB33D1A5F571A00C5EE6B /* ViewController.swift */,
+				772AB35B1A60B43E00C5EE6B /* SettingsViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			files = (
 				772AB33E1A5F571A00C5EE6B /* ViewController.swift in Sources */,
 				772AB33C1A5F571A00C5EE6B /* AppDelegate.swift in Sources */,
+				772AB35C1A60B43E00C5EE6B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
