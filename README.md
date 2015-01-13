@@ -11,6 +11,7 @@ Completed user stories:
 - Optional: User can come back to the app within 10 minutes and it would still display the last entered bill amount
 - Optional: The tip and the total amount are presented in the user specific locale currency and the appropriate thousands separator
 - Optional: User can go to Settings page and set the default color scheme for the app (dark or light)
+- Optional: User can see the total owed by each party if the bill is split (can select the number of splits from 1, which is default, to 10)
 
 Walkthrough of all user stories:
 
