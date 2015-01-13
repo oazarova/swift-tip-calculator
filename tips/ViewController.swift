@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var splitSlider: UISlider!
     @IBOutlet weak var tipPercentLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var splitTotalLable: UILabel!
+    @IBOutlet weak var splitNumberLabel: UILabel!
     
     @IBAction func updateValues() {
         
@@ -24,6 +27,7 @@ class ViewController: UIViewController {
         var billAmount = billAmountStr.doubleValue
         var tip = tipPercentage * billAmount / 100
         var total = billAmount + tip
+        var splitTotal = total / Double(Int(splitSlider.value))
 
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
@@ -32,6 +36,8 @@ class ViewController: UIViewController {
         tipLabel.text = formatter.stringFromNumber(tip)
         totalLabel.text = formatter.stringFromNumber(total)
         tipPercentLabel.text = "Tip (\(Int(tipPercentage))%)"
+        splitTotalLable.text = formatter.stringFromNumber(splitTotal)
+        splitNumberLabel.text = "\(Int(splitSlider.value))"
     }
     
     override func viewDidLoad() {
@@ -58,7 +64,6 @@ class ViewController: UIViewController {
         billField.text = ""
         updateValues()
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "reset_necessary")
-        println("doyourstuff")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -89,12 +94,10 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        println("view will disappear")
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        println("view did disappear")
     }
     
     override func didReceiveMemoryWarning() {
@@ -111,5 +114,8 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 
+    @IBAction func splitChanged(sender : AnyObject) {
+        updateValues()
+    }
 }
 
