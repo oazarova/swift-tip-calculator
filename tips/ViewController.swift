@@ -21,13 +21,13 @@ class ViewController: UIViewController {
     
     @IBAction func updateValues() {
         
-        var tipPercentages = [10.0, 15.0, 20.0]
-        var tipPercentage : Double = (tipControl.selectedSegmentIndex != UISegmentedControlNoSegment) ? tipPercentages[tipControl.selectedSegmentIndex] : NSUserDefaults.standardUserDefaults().doubleForKey("default_tip_pct")
-        var billAmountStr:NSString = billField.text
-        var billAmount = billAmountStr.doubleValue
-        var tip = tipPercentage * billAmount / 100
-        var total = billAmount + tip
-        var splitTotal = total / Double(Int(splitSlider.value))
+        let tipPercentages = [10.0, 15.0, 20.0]
+        let tipPercentage : Double = (tipControl.selectedSegmentIndex != UISegmentedControlNoSegment) ? tipPercentages[tipControl.selectedSegmentIndex] : NSUserDefaults.standardUserDefaults().doubleForKey("default_tip_pct")
+        let billAmountStr:NSString = billField.text
+        let billAmount = billAmountStr.doubleValue
+        let tip = tipPercentage * billAmount / 100
+        let total = billAmount + tip
+        let splitTotal = total / Double(Int(splitSlider.value))
 
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tipControl.selectedSegmentIndex = UISegmentedControlNoSegment
-        var stringValue = NSUserDefaults.standardUserDefaults().stringForKey("default_color_scheme")
+        let stringValue = NSUserDefaults.standardUserDefaults().stringForKey("default_color_scheme")
         if (stringValue != nil) {
             if stringValue == "Light" {
                 self.view.tintColor = UIColor.blueColor()
@@ -81,10 +81,7 @@ class ViewController: UIViewController {
             }
         }
         
-        var defaults = NSUserDefaults.standardUserDefaults()
-        
         updateValues()
-        
     }
     
     override func viewDidAppear(animated: Bool) {

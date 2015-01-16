@@ -24,10 +24,10 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
 
         var defaults = NSUserDefaults.standardUserDefaults()
-        var doubleValue = Float(defaults.doubleForKey("default_tip_pct"))
+        let doubleValue = Float(defaults.doubleForKey("default_tip_pct"))
         tipSlider.value = (doubleValue != 0) ? doubleValue : 18.0
         pctLabel.text = "\(Int(doubleValue))%"
-        var stringValue = defaults.stringForKey("default_color_scheme")
+        let stringValue = defaults.stringForKey("default_color_scheme")
         if (stringValue != nil) {
             if stringValue == "Light" {
                 themeControl.selectedSegmentIndex = 0
@@ -79,7 +79,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func taxPercentageChanged(sender : AnyObject) {
-        var tipPct = Int(tipSlider.value)
+        let tipPct = Int(tipSlider.value)
         pctLabel.text = "\(tipPct)%"
         
         var defaults = NSUserDefaults.standardUserDefaults()
